@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -18,8 +19,9 @@ export default function Home() {
         zIndex: 100,
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link href="/" style={{ fontSize: '24px', fontWeight: 700 }}>
-            <span style={{ color: 'var(--accent)' }}>Gym</span> Reel
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <Image src="/AppIcon.png" alt="Gym Reel" width={40} height={40} style={{ borderRadius: '10px' }} />
+            <span style={{ fontSize: '24px', fontWeight: 700 }}><span style={{ color: 'var(--accent)' }}>Gym</span> Reel</span>
           </Link>
           <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
             <Link href="#features" style={{ color: 'var(--text-secondary)', fontSize: '15px' }}>Features</Link>
@@ -41,6 +43,14 @@ export default function Home() {
         background: 'radial-gradient(ellipse at top, rgba(255, 107, 53, 0.1) 0%, transparent 50%)',
       }}>
         <div className="container">
+          <Image
+            src="/GMRLLogoMascot.png"
+            alt="Gym Reel Mascot"
+            width={180}
+            height={180}
+            style={{ marginBottom: '24px' }}
+            priority
+          />
           <div style={{
             display: 'inline-block',
             padding: '8px 16px',
@@ -207,9 +217,12 @@ export default function Home() {
             marginBottom: '40px',
           }}>
             <div>
-              <h3 style={{ fontSize: '20px', fontWeight: 700, marginBottom: '16px' }}>
-                <span style={{ color: 'var(--accent)' }}>Gym</span> Reel
-              </h3>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+                <Image src="/AppIcon.png" alt="Gym Reel" width={32} height={32} style={{ borderRadius: '8px' }} />
+                <h3 style={{ fontSize: '20px', fontWeight: 700 }}>
+                  <span style={{ color: 'var(--accent)' }}>Gym</span> Reel
+                </h3>
+              </div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.6 }}>
                 The simplest way to organize and relive your workout videos.
               </p>

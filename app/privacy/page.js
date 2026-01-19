@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Privacy Policy - Gym Reel',
@@ -15,8 +16,9 @@ export default function Privacy() {
         borderBottom: '1px solid var(--border)',
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link href="/" style={{ fontSize: '24px', fontWeight: 700 }}>
-            <span style={{ color: 'var(--accent)' }}>Gym</span> Reel
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <Image src="/AppIcon.png" alt="Gym Reel" width={36} height={36} style={{ borderRadius: '8px' }} />
+            <span style={{ fontSize: '24px', fontWeight: 700 }}><span style={{ color: 'var(--accent)' }}>Gym</span> Reel</span>
           </Link>
         </div>
       </nav>
