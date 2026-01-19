@@ -50,7 +50,7 @@ export default function Home() {
           {/* Left: Text Content */}
           <div style={{ flex: '1', minWidth: '300px', maxWidth: '500px' }}>
             <Image
-              src="/GMRLLogoMascot.png"
+              src="/logo.png"
               alt="GMRL Mascot"
               width={140}
               height={140}
@@ -240,7 +240,7 @@ export default function Home() {
       <section className="section">
         <div className="container text-center">
           <Image
-            src="/GMRLLogoMascot.png"
+            src="/logo.png"
             alt="GMRL Mascot"
             width={120}
             height={120}
