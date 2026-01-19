@@ -113,36 +113,30 @@ export default function Home() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '24px',
+            gap: '20px',
           }}>
             {[
               {
-                icon: '📅',
                 title: 'Auto-Organize',
                 description: 'Videos are automatically grouped by workout day. No manual sorting required.'
               },
               {
-                icon: '🏷️',
                 title: 'Tag Exercises',
                 description: 'Label videos with exercises like Squat, Deadlift, Bench Press and more.'
               },
               {
-                icon: '🏆',
                 title: 'Track PRs',
                 description: 'Mark your personal records and watch your progress over time.'
               },
               {
-                icon: '⭐',
                 title: 'Highlights',
                 description: 'Create highlight reels of your best lifts and transformations.'
               },
               {
-                icon: '🔍',
                 title: 'Instant Search',
                 description: 'Find any lift by exercise, tag, or date. No more endless scrolling.'
               },
               {
-                icon: '☁️',
                 title: 'Sync Anywhere',
                 description: 'Your tags and highlights sync across all your devices automatically.'
               },
@@ -150,22 +144,10 @@ export default function Home() {
               <div key={index} className="card" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '12px',
+                gap: '8px',
               }}>
-                <div style={{
-                  fontSize: '32px',
-                  width: '56px',
-                  height: '56px',
-                  background: 'var(--background-tertiary)',
-                  borderRadius: '14px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                  {feature.icon}
-                </div>
-                <h3 style={{ fontSize: '20px', fontWeight: 600 }}>{feature.title}</h3>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{feature.description}</p>
+                <h3 style={{ fontSize: '18px', fontWeight: 600 }}>{feature.title}</h3>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '15px' }}>{feature.description}</p>
               </div>
             ))}
           </div>
