@@ -16,9 +16,9 @@ export default function Privacy() {
         borderBottom: '1px solid var(--border)',
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <Image src="/AppIcon.png" alt="Gym Reel" width={36} height={36} style={{ borderRadius: '8px' }} />
-            <span style={{ fontSize: '24px', fontWeight: 700 }}><span style={{ color: 'var(--accent)' }}>Gym</span> Reel</span>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Image src="/AppIcon.png" alt="GMRL" width={36} height={36} style={{ borderRadius: '8px' }} />
+            <span style={{ fontSize: '20px', fontWeight: 700 }}>GMRL</span>
           </Link>
         </div>
       </nav>
