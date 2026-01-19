@@ -49,15 +49,6 @@ export default function Home() {
         }}>
           {/* Left: Text Content */}
           <div style={{ flex: '1', minWidth: '300px', maxWidth: '500px' }}>
-            <Image
-              src="/logo.png"
-              alt="GMRL Mascot"
-              width={140}
-              height={140}
-              style={{ marginBottom: '32px' }}
-              priority
-            />
-
             <h1 style={{
               fontSize: 'clamp(40px, 6vw, 56px)',
               fontWeight: 700,
@@ -239,13 +230,6 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section">
         <div className="container text-center">
-          <Image
-            src="/logo.png"
-            alt="GMRL Mascot"
-            width={120}
-            height={120}
-            style={{ marginBottom: '32px' }}
-          />
           <h2 style={{ fontSize: '36px', fontWeight: 700, marginBottom: '16px' }}>
             Ready to track your gains?
           </h2>
