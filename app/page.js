@@ -117,26 +117,32 @@ export default function Home() {
           }}>
             {[
               {
+                image: '/mascot-organize.png',
                 title: 'Auto-Organize',
                 description: 'Videos are automatically grouped by workout day. No manual sorting required.'
               },
               {
+                image: '/mascot-add.png',
                 title: 'Tag Exercises',
                 description: 'Label videos with exercises like Squat, Deadlift, Bench Press and more.'
               },
               {
+                image: '/mascot-pr.png',
                 title: 'Track PRs',
                 description: 'Mark your personal records and watch your progress over time.'
               },
               {
+                image: '/mascot-highlights.png',
                 title: 'Highlights',
                 description: 'Create highlight reels of your best lifts and transformations.'
               },
               {
+                image: '/mascot-login.png',
                 title: 'Instant Search',
                 description: 'Find any lift by exercise, tag, or date. No more endless scrolling.'
               },
               {
+                image: '/mascot-sync.png',
                 title: 'Sync Anywhere',
                 description: 'Your tags and highlights sync across all your devices automatically.'
               },
@@ -144,8 +150,18 @@ export default function Home() {
               <div key={index} className="card" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '8px',
+                gap: '12px',
+                alignItems: 'center',
+                textAlign: 'center',
+                padding: '32px 24px',
               }}>
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  width={100}
+                  height={100}
+                  style={{ objectFit: 'contain' }}
+                />
                 <h3 style={{ fontSize: '18px', fontWeight: 600 }}>{feature.title}</h3>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '15px' }}>{feature.description}</p>
               </div>
