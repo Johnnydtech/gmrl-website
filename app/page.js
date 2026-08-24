@@ -115,116 +115,19 @@ function TabIcon({ d }) {
 /* The hero phone: home feed of the actual 1.2 app, drawn in code */
 function HeroPhone() {
   return (
-    <div className="lp-phone" aria-hidden="true">
-      <div style={{ padding: '52px 16px 0' }}>
-        {/* header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-          <span className="lp-display" style={{ fontWeight: 400, fontSize: 20, letterSpacing: '-0.02em' }}>
-            GMRL
-          </span>
-          <div style={{ display: 'flex', gap: 8 }}>
-            <div style={{ width: 26, height: 26, borderRadius: 13, background: 'rgba(255,255,255,0.1)' }} />
-            <div style={{ width: 26, height: 26, borderRadius: 13, background: 'rgba(255,255,255,0.1)' }} />
-          </div>
-        </div>
-
-        {/* story row — emoji highlight icons */}
-        <div style={{ display: 'flex', gap: 12, marginBottom: 18 }}>
-          <div style={{ textAlign: 'center' }}>
-            <StoryRing color="#3a3a3c" size={50}>
-              <span style={{ fontSize: 18, color: 'rgba(255,255,255,0.5)' }}>+</span>
-            </StoryRing>
-            <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>New</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <StoryRing color="var(--teal)" size={50} pulse>
-              <Image
-                src="/GMRLLogoMascot.png"
-                alt=""
-                width={80}
-                height={80}
-                style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 3 }}
-              />
-            </StoryRing>
-            <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Crew</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <StoryRing color="var(--yellow)" size={50}>
-              <span style={{ fontSize: 19, lineHeight: 1 }}>🏋️</span>
-            </StoryRing>
-            <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Power cle…</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <StoryRing color="var(--yellow)" size={50}>
-              <span style={{ fontSize: 19, lineHeight: 1 }}>🏆</span>
-            </StoryRing>
-            <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Snatch</div>
-          </div>
-        </div>
-
-        {/* date header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 10 }}>
-          <span className="lp-display" style={{ fontWeight: 400, fontSize: 17 }}>Leg Day</span>
-          <span style={{ fontSize: 11, color: 'var(--text-tertiary)' }}>4 clips ›</span>
-        </div>
-
-        {/* clip grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-          <ClipCard hue1="#233b36" hue2="#12231f" duration="0:15" label="SQUAT" pr />
-          <ClipCard hue1="#3b2a23" hue2="#1f1512" duration="0:23" label="CLEAN" />
-        </div>
-      </div>
-
-      {/* tab bar */}
-      <div
-        style={{
-          position: 'absolute',
-          left: 14,
-          right: 14,
-          bottom: 14,
-          height: 58,
-          borderRadius: 999,
-          background: 'rgba(10,10,12,0.85)',
-          border: '1px solid rgba(255,255,255,0.1)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around',
-          backdropFilter: 'blur(10px)',
-        }}
-      >
-        <TabIcon d="M4.5 11.5 L12 5 L19.5 11.5 M6.5 10 V19 H17.5 V10 M10.5 19 V14.5 H13.5 V19" />
-        <TabIcon d="M6 10.5 H18 V18.5 H6 Z M8 10.5 V8 H16 V10.5 M10 8 V6 H14 V8" />
-        {/* tap button */}
-        <div style={{ position: 'relative', width: 46, height: 46 }}>
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              borderRadius: '50%',
-              border: '2px solid var(--teal)',
-              animation: 'lpRipple 2.2s ease-out infinite',
-            }}
-          />
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              borderRadius: '50%',
-              background: '#fff',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--teal)',
-              fontWeight: 400,
-              fontSize: 17,
-            }}
-          >
-            )))
-          </div>
-        </div>
-        <TabIcon d="M11 5 a6 6 0 1 0 0 12 a6 6 0 0 0 0 -12 Z M15.5 15.5 L20 20" />
-        <TabIcon d="M9.5 6 a3 3 0 1 0 0 6 a3 3 0 0 0 0 -6 Z M4.5 19 q5 -5.5 10 0 M16.5 8 a2.4 2.4 0 1 1 -0.01 4.8 M15.5 18.8 q2.6 -3 5 -0.5" />
-      </div>
+    <div
+      className="lp-phone"
+      aria-hidden="true"
+      style={{ height: 'auto', aspectRatio: '540 / 1174', position: 'relative' }}
+    >
+      <Image
+        src="/shot-tap.png"
+        alt=""
+        fill
+        priority
+        sizes="300px"
+        style={{ objectFit: 'cover' }}
+      />
     </div>
   )
 }
@@ -443,20 +346,35 @@ export default function Home() {
                 you&apos;re crew — a real-life handshake, verified in person.
               </p>
               <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 220, position: 'relative', padding: '18px 0' }}>
-                {/* real in-app screenshot of the tap ceremony */}
-                <Image
-                  src="/shot-tap.png"
-                  alt="GMRL tap-to-connect screen: Hold phones together"
-                  width={496}
-                  height={845}
-                  style={{
-                    width: 210,
-                    height: 'auto',
-                    borderRadius: 22,
-                    border: '1px solid rgba(255,255,255,0.14)',
-                    boxShadow: '0 20px 50px rgba(0,0,0,0.6), 0 6px 24px rgba(53,196,165,0.15)',
-                  }}
-                />
+                <div style={{ position: 'relative', width: 120, height: 120 }}>
+                  {[0, 0.7, 1.4].map((d) => (
+                    <div
+                      key={d}
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        borderRadius: '50%',
+                        border: '2px solid var(--teal)',
+                        animation: `lpRipple 2.4s ease-out ${d}s infinite`,
+                      }}
+                    />
+                  ))}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: 18,
+                      borderRadius: '50%',
+                      background: 'var(--teal)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#04110d',
+                      fontSize: 26,
+                    }}
+                  >
+                    )))
+                  </div>
+                </div>
                 <Image
                   src="/mascot-onboarding.png"
                   alt=""
