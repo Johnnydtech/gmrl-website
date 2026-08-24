@@ -442,43 +442,27 @@ export default function Home() {
                 No usernames, no follow spam. Hold your phones together at the gym and
                 you&apos;re crew — a real-life handshake, verified in person.
               </p>
-              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 220, position: 'relative' }}>
-                <div style={{ position: 'relative', width: 120, height: 120 }}>
-                  {[0, 0.7, 1.4].map((d) => (
-                    <div
-                      key={d}
-                      style={{
-                        position: 'absolute',
-                        inset: 0,
-                        borderRadius: '50%',
-                        border: '2px solid var(--teal)',
-                        animation: `lpRipple 2.4s ease-out ${d}s infinite`,
-                      }}
-                    />
-                  ))}
-                  <div
-                    style={{
-                      position: 'absolute',
-                      inset: 18,
-                      borderRadius: '50%',
-                      background: 'var(--teal)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#04110d',
-                      fontWeight: 400,
-                      fontSize: 26,
-                    }}
-                  >
-                    )))
-                  </div>
-                </div>
+              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 220, position: 'relative', padding: '18px 0' }}>
+                {/* real in-app screenshot of the tap ceremony */}
+                <Image
+                  src="/shot-tap.png"
+                  alt="GMRL tap-to-connect screen: Hold phones together"
+                  width={496}
+                  height={845}
+                  style={{
+                    width: 210,
+                    height: 'auto',
+                    borderRadius: 22,
+                    border: '1px solid rgba(255,255,255,0.14)',
+                    boxShadow: '0 20px 50px rgba(0,0,0,0.6), 0 6px 24px rgba(53,196,165,0.15)',
+                  }}
+                />
                 <Image
                   src="/mascot-onboarding.png"
                   alt=""
                   width={110}
                   height={110}
-                  style={{ position: 'absolute', right: -8, bottom: -14, transform: 'rotate(6deg)' }}
+                  style={{ position: 'absolute', right: -2, bottom: -8, transform: 'rotate(6deg)' }}
                 />
               </div>
               <div style={{ display: 'flex', gap: 8 }}>
