@@ -132,19 +132,25 @@ function HeroPhone() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <StoryRing color="var(--teal)" size={50} pulse>
-              <Image src="/GMRLLogoMascot.png" alt="" width={40} height={40} style={{ objectFit: 'cover' }} />
+              <Image
+                src="/GMRLLogoMascot.png"
+                alt=""
+                width={80}
+                height={80}
+                style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 3 }}
+              />
             </StoryRing>
             <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Crew</div>
           </div>
           <div style={{ textAlign: 'center' }}>
             <StoryRing color="var(--yellow)" size={50}>
-              <span style={{ fontSize: 20 }}>🏋️</span>
+              <span style={{ fontSize: 19, lineHeight: 1 }}>🏋️</span>
             </StoryRing>
             <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Power cle…</div>
           </div>
           <div style={{ textAlign: 'center' }}>
             <StoryRing color="var(--yellow)" size={50}>
-              <span style={{ fontSize: 20 }}>🏆</span>
+              <span style={{ fontSize: 19, lineHeight: 1 }}>🏆</span>
             </StoryRing>
             <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Snatch</div>
           </div>
@@ -458,7 +464,7 @@ export default function Home() {
                   </svg>
                 </StoryRing>
                 <StoryRing color="var(--yellow)" size={58}>
-                  <span style={{ fontSize: 20 }}>🏋️</span>
+                  <span style={{ fontSize: 19, lineHeight: 1 }}>🏋️</span>
                 </StoryRing>
                 <StoryRing color="var(--yellow)" size={58}>
                   <span style={{ fontSize: 20 }}>🔥</span>
