@@ -118,11 +118,11 @@ export default function Help() {
           {[
             {
               q: 'Are my videos uploaded to the cloud?',
-              a: 'No. Your videos stay on your device in your Photo Library. Gym Reel only stores references to your videos, along with your tags and metadata.'
+              a: 'By default, your videos stay on your device in your Photo Library — Gym Reel only stores references to them, along with your tags and metadata. If you enable optional cloud backup, your videos are uploaded securely to your private cloud storage so they can sync across devices.'
             },
             {
               q: 'What data is stored on your servers?',
-              a: 'We store your account info (email, display name), exercise tags, highlights, and preferences. Your actual video files never leave your device.'
+              a: 'We store your account info (email, display name), exercise tags, highlights, and preferences. Your video files stay on your device unless you enable optional cloud backup, in which case they are uploaded securely to your private cloud storage.'
             },
             {
               q: 'Is my data secure?',
@@ -153,7 +153,7 @@ export default function Help() {
             },
             {
               q: 'How do I delete my account?',
-              a: 'Go to Profile → Delete Account. This will permanently delete your account and all associated data (tags, highlights, preferences). Your videos in your Photo Library are not affected.'
+              a: 'Go to Profile → Settings → Delete Account. This will permanently delete your account and all associated data (tags, highlights, preferences). Your videos in your Photo Library are not affected.'
             },
             {
               q: 'How do I sign out?',
