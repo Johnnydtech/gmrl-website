@@ -114,31 +114,32 @@ function HeroPhone() {
           </div>
         </div>
 
-        {/* story row */}
+        {/* story row — emoji highlight icons */}
         <div style={{ display: 'flex', gap: 12, marginBottom: 18 }}>
-          <StoryRing color="#3a3a3c" size={50}>
-            <span style={{ fontSize: 18, color: 'rgba(255,255,255,0.5)' }}>+</span>
-          </StoryRing>
-          <StoryRing color="var(--teal)" size={50} pulse>
-            {/* friend avatar: simple face */}
-            <svg viewBox="0 0 40 40" width="40" height="40">
-              <circle cx="20" cy="15" r="7" fill="#E8907A" />
-              <path d="M8 34 q12 -14 24 0z" fill="#E8907A" />
-            </svg>
-          </StoryRing>
-          <StoryRing color="var(--yellow)" size={50}>
-            <svg viewBox="0 0 40 40" width="40" height="40">
-              <rect x="6" y="18" width="28" height="3" rx="1.5" fill="#ddd" />
-              <circle cx="9" cy="19.5" r="5" fill="#222" />
-              <circle cx="31" cy="19.5" r="5" fill="#222" />
-            </svg>
-          </StoryRing>
-          <StoryRing color="var(--yellow)" size={50}>
-            <svg viewBox="0 0 40 40" width="40" height="40">
-              <circle cx="20" cy="13" r="6" fill="#eee" />
-              <path d="M20 20 l-6 14 h12z" fill="#eee" />
-            </svg>
-          </StoryRing>
+          <div style={{ textAlign: 'center' }}>
+            <StoryRing color="#3a3a3c" size={50}>
+              <span style={{ fontSize: 18, color: 'rgba(255,255,255,0.5)' }}>+</span>
+            </StoryRing>
+            <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>New</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <StoryRing color="var(--teal)" size={50} pulse>
+              <Image src="/GMRLLogoMascot.png" alt="" width={40} height={40} style={{ objectFit: 'cover' }} />
+            </StoryRing>
+            <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Crew</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <StoryRing color="var(--yellow)" size={50}>
+              <span style={{ fontSize: 20 }}>🏋️</span>
+            </StoryRing>
+            <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Power cle…</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <StoryRing color="var(--yellow)" size={50}>
+              <span style={{ fontSize: 20 }}>🏆</span>
+            </StoryRing>
+            <div style={{ fontSize: 8.5, color: 'var(--text-tertiary)', marginTop: 4 }}>Snatch</div>
+          </div>
         </div>
 
         {/* date header */}
