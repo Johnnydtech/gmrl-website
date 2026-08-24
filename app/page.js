@@ -98,6 +98,14 @@ function ClipCard({ hue1, hue2, duration, label, pr }) {
   )
 }
 
+function TabIcon({ d }) {
+  return (
+    <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true">
+      <path d={d} fill="none" stroke="rgba(255,255,255,0.55)" strokeWidth="1.8" strokeLinejoin="round" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 /* The hero phone: home feed of the actual 1.2 app, drawn in code */
 function HeroPhone() {
   return (
@@ -172,9 +180,8 @@ function HeroPhone() {
           backdropFilter: 'blur(10px)',
         }}
       >
-        {['⌂', '▣'].map((g) => (
-          <span key={g} style={{ color: 'rgba(255,255,255,0.55)', fontSize: 16 }}>{g}</span>
-        ))}
+        <TabIcon d="M4 11 L12 4 L20 11 V20 H14 V15 H10 V20 H4 Z" />
+        <TabIcon d="M5 8 H19 V20 H5 Z M8 8 V5 H16 V8" />
         {/* tap button */}
         <div style={{ position: 'relative', width: 46, height: 46 }}>
           <div
@@ -203,9 +210,8 @@ function HeroPhone() {
             )))
           </div>
         </div>
-        {['⌕', '⚉'].map((g) => (
-          <span key={g} style={{ color: 'rgba(255,255,255,0.55)', fontSize: 16 }}>{g}</span>
-        ))}
+        <TabIcon d="M10.5 4 a6.5 6.5 0 1 0 0 13 a6.5 6.5 0 0 0 0 -13 Z M15.5 15.5 L20 20" />
+        <TabIcon d="M9 5 a3.2 3.2 0 1 0 0 6.4 a3.2 3.2 0 0 0 0 -6.4 Z M3.5 19 q5.5 -6 11 0 Z M16 7 a2.6 2.6 0 1 1 0 5.2 M15 18.6 q3 -3.4 5.8 -0.4" />
       </div>
     </div>
   )
