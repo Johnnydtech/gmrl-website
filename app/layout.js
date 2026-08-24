@@ -25,7 +25,7 @@ export const metadata = {
   },
   title: 'Gym Reel - Organize Your Workout Videos',
   description: 'The simplest way to organize and relive your workout videos. Track your gym progress with automatic organization, exercise tagging, and PR tracking.',
-  keywords: 'gym, workout, fitness, video, tracker, exercise, PR, personal record, lifting',
+  keywords: 'gym, workout, fitness, video, tracker, exercise, PR, personal record, lifting, gym video app, workout video organizer, PR tracker, lifting with friends, form check app',
   openGraph: {
     title: 'Gym Reel - Organize Your Workout Videos',
     description: 'The simplest way to organize and relive your workout videos.',
@@ -53,10 +53,35 @@ export const metadata = {
   },
 }
 
+const siteJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'GMRL',
+    alternateName: 'Gym Reel',
+    url: 'https://gmrl.app',
+    logo: 'https://gmrl.app/AppIcon.png',
+    email: 'support@gmrl.app',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Gym Reel',
+    alternateName: 'GMRL',
+    url: 'https://gmrl.app',
+  },
+]
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   )
 }

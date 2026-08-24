@@ -1,0 +1,47 @@
+# Weekly automated blog post for gmrl.app.
+#
+# Every Monday at 14:00 UTC (and on manual dispatch), this workflow asks
+# Claude to write a new post for content/blog and commits it.
+#
+# Setup: add an ANTHROPIC_API_KEY repository secret
+# (Settings -> Secrets and variables -> Actions -> New repository secret)
+# containing an Anthropic API key with access to the Messages API.
+
+name: Weekly blog post
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-post.mjs
+
+      - name: Commit and push
+        run: |
+          git add content/blog
+          if git diff --cached --quiet; then
+            echo "No new post was created; skipping commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: weekly blog post"
+          git push

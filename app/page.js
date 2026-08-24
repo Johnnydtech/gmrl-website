@@ -274,11 +274,39 @@ function PlayerMock() {
 
 /* ---------- Page ---------- */
 
+const appJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': ['SoftwareApplication', 'MobileApplication'],
+  name: 'Gym Reel (GMRL)',
+  operatingSystem: 'iOS',
+  applicationCategory: 'HealthApplication',
+  description:
+    'Film your lifts, tag your PRs, and share the grind with your gym crew. Organize workout videos into dated sessions with exercise tagging and PR tracking.',
+  url: 'https://gmrl.app',
+  installUrl: APP_STORE_URL,
+  downloadUrl: APP_STORE_URL,
+  image: 'https://gmrl.app/AppIcon.png',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  author: {
+    '@type': 'Organization',
+    name: 'GMRL',
+    url: 'https://gmrl.app',
+  },
+}
+
 export default function Home() {
   const year = new Date().getFullYear()
 
   return (
     <main className="lp">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
       <div className="lp-grain" />
 
       {/* Nav */}
@@ -302,6 +330,7 @@ export default function Home() {
           </Link>
           <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
             <Link href="#crew" style={{ color: 'var(--text-secondary)', fontSize: 15 }}>Features</Link>
+            <Link href="/blog" style={{ color: 'var(--text-secondary)', fontSize: 15 }}>Blog</Link>
             <a href={APP_STORE_URL} className="lp-btn lp-btn-yellow" style={{ padding: '10px 20px', fontSize: 14 }}>
                Download
             </a>
@@ -565,6 +594,7 @@ export default function Home() {
             <Link href="/terms" style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Terms</Link>
             <Link href="/support" style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Support</Link>
             <Link href="/help" style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Help</Link>
+            <Link href="/blog" style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Blog</Link>
           </div>
         </div>
       </footer>

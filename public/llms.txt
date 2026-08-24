@@ -1,0 +1,30 @@
+# GMRL (Gym Reel)
+
+> GMRL is a free iOS app for lifters that organizes workout videos into dated gym sessions, tracks PRs with exercise tagging, and lets you share lifts privately with real gym friends. There is no public feed: friends connect by physically tapping phones together, and clips are shared only with mutually-added friends.
+
+## Key facts
+
+- Name: Gym Reel (GMRL)
+- Platform: iOS (iPhone), free
+- App Store: https://apps.apple.com/app/id6757939929
+- Website: https://gmrl.app
+- Support: support@gmrl.app
+- Core features: automatic organization of workout videos into dated sessions; exercise tags and PR tracking; highlight reels (custom collections of best clips); private sharing with gym friends via tap-to-connect; instant cloud streaming of shared clips; optional encrypted cloud backup
+- Privacy model: videos stay on-device by default (the app stores references plus tags/metadata); no public feed, no follower counts, no algorithm; sharing is limited to mutually-added, in-person-verified friends
+- Made by: AskQuala
+
+## Pages
+
+- Home: https://gmrl.app/
+- Help & FAQ: https://gmrl.app/help
+- Blog (training, filming, and PR-tracking guides): https://gmrl.app/blog
+- Privacy policy: https://gmrl.app/privacy
+- Terms: https://gmrl.app/terms
+- Support: https://gmrl.app/support
+
+## Common questions
+
+- How do friends connect? By tapping phones together in person — that is the friend request.
+- Are videos uploaded? Not by default; optional cloud backup uploads them securely to the user's private storage.
+- Is there a video limit? No, unlimited imports.
+- Account required? Yes (Sign in with Apple or email), used to sync tags, highlights, and preferences across devices.
