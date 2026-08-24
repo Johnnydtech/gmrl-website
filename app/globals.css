@@ -195,3 +195,214 @@ a {
     border-radius: 35px;
   }
 }
+
+/* ============================================================
+   Landing v2 — "midnight gym poster"
+   ============================================================ */
+
+:root {
+  --teal: #35C4A5;
+  --teal-dim: rgba(53, 196, 165, 0.16);
+  --yellow: var(--accent);
+  --yellow-dim: rgba(245, 200, 66, 0.14);
+  --ink: #050505;
+}
+
+.lp {
+  font-family: var(--font-body), 'Barlow', sans-serif;
+  background:
+    radial-gradient(1100px 520px at 85% -10%, rgba(53,196,165,0.10), transparent 60%),
+    radial-gradient(900px 480px at -10% 30%, rgba(245,200,66,0.08), transparent 55%),
+    var(--ink);
+  overflow: hidden;
+}
+
+.lp-display {
+  font-family: var(--font-display), 'Anton', 'Arial Narrow', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Grain overlay */
+.lp-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* Hero reveal */
+@keyframes lpRise {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lp-rise { animation: lpRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.lp-d1 { animation-delay: 0.08s; }
+.lp-d2 { animation-delay: 0.18s; }
+.lp-d3 { animation-delay: 0.3s; }
+.lp-d4 { animation-delay: 0.45s; }
+
+/* Marquee */
+@keyframes lpMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.lp-marquee {
+  display: flex;
+  width: max-content;
+  animation: lpMarquee 28s linear infinite;
+}
+.lp-marquee span {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 400;
+  font-size: clamp(22px, 3.4vw, 38px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 14px 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.22);
+}
+.lp-marquee span b {
+  color: var(--yellow);
+  -webkit-text-stroke: 0;
+  font-weight: 800;
+}
+
+/* Story ring pulse */
+@keyframes lpPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(53,196,165,0.45); }
+  50% { box-shadow: 0 0 0 9px rgba(53,196,165,0); }
+}
+
+/* Tap ripple */
+@keyframes lpRipple {
+  from { transform: scale(0.6); opacity: 0.8; }
+  to { transform: scale(1.9); opacity: 0; }
+}
+
+/* Heart pop */
+@keyframes lpHeart {
+  0% { transform: scale(0); opacity: 0; }
+  20% { transform: scale(1.25); opacity: 1; }
+  45% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/* Segment fill */
+@keyframes lpFill {
+  from { width: 8%; }
+  to { width: 96%; }
+}
+
+/* Float */
+@keyframes lpFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--tilt, 0deg)); }
+  50% { transform: translateY(-12px) rotate(var(--tilt, 0deg)); }
+}
+
+/* Buttons */
+.lp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 16px 28px;
+  font-size: 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.lp-btn:hover { transform: translateY(-2px); }
+.lp-btn-yellow {
+  background: var(--yellow);
+  color: #111;
+  box-shadow: 0 8px 30px rgba(245,200,66,0.35);
+}
+.lp-btn-ghost {
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+/* Bento cards */
+.lp-card {
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
+  padding: 28px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.lp-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245,200,66,0.35);
+}
+.lp-card h3 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.lp-card p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.lp-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.lp-chip.on {
+  background: var(--yellow);
+  color: #111;
+  border-color: var(--yellow);
+}
+.lp-chip.teal {
+  background: var(--teal-dim);
+  color: var(--teal);
+  border-color: rgba(53,196,165,0.35);
+}
+
+/* Phone frame (pure CSS) */
+.lp-phone {
+  width: 300px;
+  height: 620px;
+  border-radius: 48px;
+  background: #0B0B0C;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow:
+    0 0 0 8px #121214,
+    0 40px 90px rgba(0,0,0,0.7),
+    0 10px 40px rgba(53,196,165,0.10);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.lp-phone::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 26px;
+  border-radius: 999px;
+  background: #000;
+  z-index: 5;
+}
+
+@media (max-width: 900px) {
+  .lp-hero-grid { flex-direction: column; }
+  .lp-phone { width: 260px; height: 540px; }
+}

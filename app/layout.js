@@ -1,4 +1,17 @@
 import './globals.css'
+import { Anton, Barlow } from 'next/font/google'
+
+const display = Anton({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-display',
+})
+
+const body = Barlow({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-body',
+})
 
 export const viewport = {
   width: 'device-width',
@@ -42,7 +55,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>{children}</body>
     </html>
   )
