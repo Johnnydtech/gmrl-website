@@ -100,8 +100,14 @@ function ClipCard({ hue1, hue2, duration, label, pr }) {
 
 function TabIcon({ d }) {
   return (
-    <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true">
-      <path d={d} fill="none" stroke="rgba(255,255,255,0.55)" strokeWidth="1.8" strokeLinejoin="round" strokeLinecap="round" />
+    <svg
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      aria-hidden="true"
+      style={{ flexShrink: 0, display: 'block' }}
+    >
+      <path d={d} fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.7" strokeLinejoin="round" strokeLinecap="round" />
     </svg>
   )
 }
@@ -186,8 +192,8 @@ function HeroPhone() {
           backdropFilter: 'blur(10px)',
         }}
       >
-        <TabIcon d="M4 11 L12 4 L20 11 V20 H14 V15 H10 V20 H4 Z" />
-        <TabIcon d="M5 8 H19 V20 H5 Z M8 8 V5 H16 V8" />
+        <TabIcon d="M4.5 11.5 L12 5 L19.5 11.5 M6.5 10 V19 H17.5 V10 M10.5 19 V14.5 H13.5 V19" />
+        <TabIcon d="M6 10.5 H18 V18.5 H6 Z M8 10.5 V8 H16 V10.5 M10 8 V6 H14 V8" />
         {/* tap button */}
         <div style={{ position: 'relative', width: 46, height: 46 }}>
           <div
@@ -216,8 +222,8 @@ function HeroPhone() {
             )))
           </div>
         </div>
-        <TabIcon d="M10.5 4 a6.5 6.5 0 1 0 0 13 a6.5 6.5 0 0 0 0 -13 Z M15.5 15.5 L20 20" />
-        <TabIcon d="M9 5 a3.2 3.2 0 1 0 0 6.4 a3.2 3.2 0 0 0 0 -6.4 Z M3.5 19 q5.5 -6 11 0 Z M16 7 a2.6 2.6 0 1 1 0 5.2 M15 18.6 q3 -3.4 5.8 -0.4" />
+        <TabIcon d="M11 5 a6 6 0 1 0 0 12 a6 6 0 0 0 0 -12 Z M15.5 15.5 L20 20" />
+        <TabIcon d="M9.5 6 a3 3 0 1 0 0 6 a3 3 0 0 0 0 -6 Z M4.5 19 q5 -5.5 10 0 M16.5 8 a2.4 2.4 0 1 1 -0.01 4.8 M15.5 18.8 q2.6 -3 5 -0.5" />
       </div>
     </div>
   )
@@ -363,7 +369,7 @@ export default function Home() {
               alt=""
               width={130}
               height={130}
-              style={{ position: 'absolute', bottom: -24, left: -58, zIndex: 3, transform: 'rotate(-8deg)' }}
+              style={{ position: 'absolute', bottom: -34, left: -98, zIndex: 3, transform: 'rotate(-8deg)' }}
             />
           </div>
         </div>
